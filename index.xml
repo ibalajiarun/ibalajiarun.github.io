@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Balaji Arun</title>
+    <link>http://balajiarun.me/</link>
+    <description>Recent content on Balaji Arun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Jun 2016 15:42:30 -0400</lastBuildDate>
+    <atom:link href="http://balajiarun.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About</title>
+      <link>http://balajiarun.me/about/</link>
+      <pubDate>Sun, 19 Jun 2016 15:42:30 -0400</pubDate>
+      
+      <guid>http://balajiarun.me/about/</guid>
+      <description>&lt;p&gt;I am Balaji&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Welcome</title>
+      <link>http://balajiarun.me/blog/welcome/</link>
+      <pubDate>Sun, 19 Jun 2016 14:48:16 -0400</pubDate>
+      
+      <guid>http://balajiarun.me/blog/welcome/</guid>
+      <description>&lt;p&gt;Hello There!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
