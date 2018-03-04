@@ -17,10 +17,10 @@
       
     
   
-  <meta name="description" content="Today, there exists a plethora of online services (e.g. Facebook, Google) that serve millions of users daily. Usually, each of these services have multiple subcomponents that work cohesively to deliver a rich user experience. One vital component that is prevalent in these services is the one that maintains the shared state. One example of a shared state component is a database, which enables operations on structured data. Such shared states are replicated across multiple server nodes, and even across multiple data centers to guarantee availability, i.e., if a node fails, other nodes can still serve requests on the shared state; low-latency, i.e., placing the copy of the shared state in a datacenter closer to the users will reduce the time required to serve the users; and scalability, i.e., the bottleneck that a single server node cannot serve millions of concurrent requests can be alleviated by having multiple nodes serve users at the same time. These replicated shared states need to be kept consistent i.e. every copy of the shared state must be the same in all the replicated nodes, and maintaining this consistency requires that each of these replicating nodes communicate with each other and reach an agreement on the order in which the operations on the shared data should be applied. In that regard, this thesis proposes Caesar, a consensus protocol with the aforementioned guarantees that will ease the deployment of services that contain a shared state. It addresses the problem of performance degradation in existing approaches when the same part of the shared state are accessed by multiple users that are connected to different server nodes. The effectiveness of Caesar is demonstrated through an evaluation study performed by deploying the protocol on five of Amazon&#39;s AWS data centers around the world. Caesar outperforms the existing state-of-the-art by as much as 3.5x. Caesar is also resistant to heavy client loads unlike existing protocols.">
+  <meta name="description" content="Deferred Update Replication (DUR) is a powerful replication technique that allows parallelism of clients&#39; execution while a global certification phase checks the validity of the transactional execution against workloads running on remote nodes. The well-known favorable scenario of DUR is when remote transactions rarely conflict with each other. In this paper we show that, even in this case, the conflicts happening among local application threads can significantly decrease performance. We address this problem by using speculation. We let local transactions propagate their post-execution snapshot to other local transactions before the outcome of the global certification is notified. This way, in scenarios where accesses are partitioned across nodes, we prevent local transactions from aborting each other. Through experimental study based on well-known transactional benchmarks we assess the effectiveness of the approach, gaining more than 10x using TPC-C benchmark.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://ibalajiarun.github.io/talk/afosr-src17/">
+  <link rel="alternate" hreflang="en-us" href="https://ibalajiarun.github.io/publication/xdur/">
 
   
 
@@ -82,24 +82,24 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://ibalajiarun.github.io/talk/afosr-src17/">
+  <link rel="canonical" href="https://ibalajiarun.github.io/publication/xdur/">
 
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Balaji Arun">
-  <meta property="og:url" content="https://ibalajiarun.github.io/talk/afosr-src17/">
-  <meta property="og:title" content="Speeding up Consensus By Chasing Fast Decisions | Balaji Arun">
-  <meta property="og:description" content="Today, there exists a plethora of online services (e.g. Facebook, Google) that serve millions of users daily. Usually, each of these services have multiple subcomponents that work cohesively to deliver a rich user experience. One vital component that is prevalent in these services is the one that maintains the shared state. One example of a shared state component is a database, which enables operations on structured data. Such shared states are replicated across multiple server nodes, and even across multiple data centers to guarantee availability, i.e., if a node fails, other nodes can still serve requests on the shared state; low-latency, i.e., placing the copy of the shared state in a datacenter closer to the users will reduce the time required to serve the users; and scalability, i.e., the bottleneck that a single server node cannot serve millions of concurrent requests can be alleviated by having multiple nodes serve users at the same time. These replicated shared states need to be kept consistent i.e. every copy of the shared state must be the same in all the replicated nodes, and maintaining this consistency requires that each of these replicating nodes communicate with each other and reach an agreement on the order in which the operations on the shared data should be applied. In that regard, this thesis proposes Caesar, a consensus protocol with the aforementioned guarantees that will ease the deployment of services that contain a shared state. It addresses the problem of performance degradation in existing approaches when the same part of the shared state are accessed by multiple users that are connected to different server nodes. The effectiveness of Caesar is demonstrated through an evaluation study performed by deploying the protocol on five of Amazon&#39;s AWS data centers around the world. Caesar outperforms the existing state-of-the-art by as much as 3.5x. Caesar is also resistant to heavy client loads unlike existing protocols.">
+  <meta property="og:url" content="https://ibalajiarun.github.io/publication/xdur/">
+  <meta property="og:title" content="Speculative client execution in deferred update replication | Balaji Arun">
+  <meta property="og:description" content="Deferred Update Replication (DUR) is a powerful replication technique that allows parallelism of clients&#39; execution while a global certification phase checks the validity of the transactional execution against workloads running on remote nodes. The well-known favorable scenario of DUR is when remote transactions rarely conflict with each other. In this paper we show that, even in this case, the conflicts happening among local application threads can significantly decrease performance. We address this problem by using speculation. We let local transactions propagate their post-execution snapshot to other local transactions before the outcome of the global certification is notified. This way, in scenarios where accesses are partitioned across nodes, we prevent local transactions from aborting each other. Through experimental study based on well-known transactional benchmarks we assess the effectiveness of the approach, gaining more than 10x using TPC-C benchmark.">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2018-03-03T17:16:45-05:00">
+  <meta property="article:published_time" content="2014-12-08T00:00:00-05:00">
   
-  <meta property="article:modified_time" content="2018-03-03T17:16:45-05:00">
-  
-
+  <meta property="article:modified_time" content="2014-12-08T00:00:00-05:00">
   
 
-  <title>Speeding up Consensus By Chasing Fast Decisions | Balaji Arun</title>
+  
+
+  <title>Speculative client execution in deferred update replication | Balaji Arun</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -213,27 +213,62 @@
   </div>
 </nav>
 
-<div class="pub" itemscope itemtype="http://schema.org/Event">
+<div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
 
   
 
 
   <div class="article-container">
+    <h1 itemprop="name">Speculative client execution in deferred update replication</h1>
+    <span class="pub-authors" itemprop="author">
+      
+      <strong>Balaji Arun</strong>, Sachin Hirve, Roberto Palmieri, Sebastiano Peluso, Binoy Ravindran
+      
+    </span>
+    <span class="pull-right">
+      
 
-    <div class="pub-title">
-      <h1 itemprop="name">Speeding up Consensus By Chasing Fast Decisions</h1>
-      <span class="pub-authors" itemprop="author">
-        
-      </span>
-      <span class="pull-right">
-        
-
-      </span>
-    </div>
+    </span>
 
     
-      <h3>Abstract</h3>
-      <p class="pub-abstract" itemprop="text">Today, there exists a plethora of online services (e.g. Facebook, Google) that serve millions of users daily. Usually, each of these services have multiple subcomponents that work cohesively to deliver a rich user experience. One vital component that is prevalent in these services is the one that maintains the shared state. One example of a shared state component is a database, which enables operations on structured data. Such shared states are replicated across multiple server nodes, and even across multiple data centers to guarantee availability, i.e., if a node fails, other nodes can still serve requests on the shared state; low-latency, i.e., placing the copy of the shared state in a datacenter closer to the users will reduce the time required to serve the users; and scalability, i.e., the bottleneck that a single server node cannot serve millions of concurrent requests can be alleviated by having multiple nodes serve users at the same time. These replicated shared states need to be kept consistent i.e. every copy of the shared state must be the same in all the replicated nodes, and maintaining this consistency requires that each of these replicating nodes communicate with each other and reach an agreement on the order in which the operations on the shared data should be applied. In that regard, this thesis proposes Caesar, a consensus protocol with the aforementioned guarantees that will ease the deployment of services that contain a shared state. It addresses the problem of performance degradation in existing approaches when the same part of the shared state are accessed by multiple users that are connected to different server nodes. The effectiveness of Caesar is demonstrated through an evaluation study performed by deploying the protocol on five of Amazon&rsquo;s AWS data centers around the world. Caesar outperforms the existing state-of-the-art by as much as 3.5x. Caesar is also resistant to heavy client loads unlike existing protocols.</p>
+
+    
+    <h3>Abstract</h3>
+    <p class="pub-abstract" itemprop="text">Deferred Update Replication (DUR) is a powerful replication technique that allows parallelism of clients&rsquo; execution while a global certification phase checks the validity of the transactional execution against workloads running on remote nodes. The well-known favorable scenario of DUR is when remote transactions rarely conflict with each other. In this paper we show that, even in this case, the conflicts happening among local application threads can significantly decrease performance. We address this problem by using speculation. We let local transactions propagate their post-execution snapshot to other local transactions before the outcome of the global certification is notified. This way, in scenarios where accesses are partitioned across nodes, we prevent local transactions from aborting each other. Through experimental study based on well-known transactional benchmarks we assess the effectiveness of the approach, gaining more than 10x using TPC-C benchmark.</p>
+    
+
+    
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">Type</div>
+          <div class="col-xs-12 col-sm-9">
+            
+            <a href="/publication/#1">
+              Conference paper
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
+          <div class="col-xs-12 col-sm-9">In Proceedings of the 9th Workshop on Middleware for Next Generation Internet Computing</div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
     
 
     <div class="row">
@@ -242,11 +277,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
           <div class="col-xs-12 col-sm-9" itemprop="datePublished">
-            
-            Sep 29, 2017
-            <div class="talk-time">
-              
-            </div>
+            December, 2014
           </div>
         </div>
       </div>
@@ -254,43 +285,47 @@
     </div>
     <div class="visible-xs space-below"></div>
 
-    <div class="row">
+    <div class="row" style="padding-top: 10px">
       <div class="col-sm-1"></div>
       <div class="col-sm-10">
         <div class="row">
-          <div class="col-xs-12 col-sm-3 pub-row-heading">Event</div>
+          <div class="col-xs-12 col-sm-3 pub-row-heading" style="line-height:34px;">Links</div>
           <div class="col-xs-12 col-sm-9">
-            <a href="https://community.apan.org/wg/afosr/w/researchareas/21004/2017-afosr-mid-atlantic-student-research-day/" target="_blank" rel="noopener">
-            2017 AFOSR Mid-Atlantic Student Research Day
-            </a>
+
+            
+
+
+
+
+<a class="btn btn-primary btn-outline" href="https://dl.acm.org/citation.cfm?id=2676738" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           </div>
         </div>
       </div>
       <div class="col-sm-1"></div>
     </div>
     <div class="visible-xs space-below"></div>
-
-    
-    <div class="row">
-      <div class="col-sm-1"></div>
-      <div class="col-sm-10">
-        <div class="row">
-          <div class="col-xs-12 col-sm-3 pub-row-heading">Location</div>
-          <div class="col-xs-12 col-sm-9">Arlington, VA</div>
-        </div>
-      </div>
-      <div class="col-sm-1"></div>
-    </div>
-    <div class="visible-xs space-below"></div>
-    
-
-    
 
     <div class="space-below"></div>
 
-    <div class="article-style">
-      
-    </div>
+    <div class="article-style"></div>
 
     
 
