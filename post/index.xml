@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Balaji Arun</title>
-    <link>/post/</link>
+    <link>https://ibalajiarun.github.io/post/</link>
     <description>Recent content in Posts on Balaji Arun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; 2018. Balaji Arun</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0500</lastBuildDate>
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     

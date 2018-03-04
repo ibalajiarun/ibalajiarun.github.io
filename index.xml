@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Balaji Arun on Balaji Arun</title>
-    <link>/</link>
+    <link>https://ibalajiarun.github.io/</link>
     <description>Recent content in Balaji Arun on Balaji Arun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; 2018. Balaji Arun</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Speeding up Consensus By Chasing Fast Decisions</title>
-      <link>/talk/afosr-src17/</link>
+      <link>https://ibalajiarun.github.io/talk/afosr-src17/</link>
       <pubDate>Sat, 03 Mar 2018 17:16:45 -0500</pubDate>
       
-      <guid>/talk/afosr-src17/</guid>
+      <guid>https://ibalajiarun.github.io/talk/afosr-src17/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Speeding up Consensus by Chasing Fast Decisions</title>
-      <link>/publication/caesar/</link>
+      <link>https://ibalajiarun.github.io/publication/caesar/</link>
       <pubDate>Thu, 02 Mar 2017 00:00:00 -0500</pubDate>
       
-      <guid>/publication/caesar/</guid>
+      <guid>https://ibalajiarun.github.io/publication/caesar/</guid>
       <description></description>
     </item>
     
