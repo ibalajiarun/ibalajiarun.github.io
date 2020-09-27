@@ -1,0 +1,20 @@
+- title: Taming the Contention in Consensus-based Distributed Systems.
+  authors: <u>Balaji Arun</u>, Sebastiano Peluso, Roberto Palmeiri, Giuliano Losa, Binoy Ravindran
+  journal: IEEE Transactions on Dependable and Secure Computing (IEEE TDSC 2020)
+  date: 03-Feb-2020
+  link: https://www.ssrg.ece.vt.edu/papers/tdsc20-author-version.pdf
+- title: Generalized Consensus for Practical Fault Tolerance
+  authors: Mohit Garg, Sebastiano Peluso, <u>Balaji Arun</u>, Binoy Ravindran
+  journal: 20th ACM/IFIP International Middleware Conference (Middleware 2019)
+  date: 2019
+  link: https://www.ssrg.ece.vt.edu/papers/middleware19-elpis.pdf
+- title: "ezBFT: Decentralizing Byzantine Fault-Tolerant State Machine Replication"
+  authors: <u>Balaji Arun</u>, Sebastiano Peluso, Binoy Ravindran
+  journal: The 39th IEEE International Conference on Distributed Computing Systems (ICDCS 2019)
+  date: 2019
+  link: https://www.ssrg.ece.vt.edu/papers/icdcs2019.pdf
+- title: Speeding up Consensus by Chasing Fast Decisions
+  authors: <u>Balaji Arun</u>, Sebastiano Peluso, Roberto Palmeiri, Giuliano Losa, Binoy Ravindran
+  journal: The 47th IEEE/IFIP International Conference on Dependable Systems and Networks (DSN 2017)
+  date: 2017
+  link: https://www.ssrg.ece.vt.edu/papers/2017_dsn.pdf

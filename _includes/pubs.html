@@ -1,0 +1,15 @@
+<ul class="mx-2 list-group list-group-flush">
+    {% for item in include.list %}
+    <li class="list-group-item">
+        <p class="font-weight-bold my-0">
+            {% if item.link && item.link != blank %}
+                <a href="{{item.link}}" target="_blank">{{item.title}}</a>
+            {% else %}
+                {{item.title}}
+            {% endif %}
+        </p>
+        <p class="my-0">{{item.authors}}</p>
+        <p class="font-italic my-0">{{item.journal}}</p>
+    </li>
+    {% endfor %}
+</ul>
