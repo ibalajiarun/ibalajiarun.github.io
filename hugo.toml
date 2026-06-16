@@ -1,0 +1,21 @@
+baseURL = "https://ibalajiarun.github.io/"
+defaultContentLanguage = "en"
+title = "Balaji Arun"
+
+[params]
+  description = "Balaji's Personal Webpage"
+  author = "Balaji Arun"
+  avatar = "https://avatars2.githubusercontent.com/u/3034228?s=460&u=874954f553e3c0bde8e2059004a4dbf489b8a261&v=4"
+  twitter = "ibalajiarun"
+
+[taxonomies]
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
