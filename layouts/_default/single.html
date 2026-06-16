@@ -1,0 +1,8 @@
+{{ define "main" }}
+<p class="back-link"><a href="{{ "/posts/" | relURL }}">&larr; Back to blog</a></p>
+<article>
+  <h4>{{ .Title }}</h4>
+  <p class="muted small">{{ .Date.Format "January 2, 2006" }}</p>
+  {{ .Content }}
+</article>
+{{ end }}

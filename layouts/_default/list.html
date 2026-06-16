@@ -1,0 +1,18 @@
+{{ define "main" }}
+<h4>{{ .Title }}</h4>
+{{ .Content }}
+
+{{ $pages := where .RegularPages "Draft" false }}
+{{ if $pages }}
+<ul class="post-list">
+  {{ range $pages.ByDate.Reverse }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span class="muted small"> — {{ .Date.Format "Jan 2, 2006" }}</span>
+  </li>
+  {{ end }}
+</ul>
+{{ else }}
+<p class="muted">No posts yet.</p>
+{{ end }}
+{{ end }}

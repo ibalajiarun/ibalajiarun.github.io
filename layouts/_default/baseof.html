@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <div class="site{{ if .IsHome }} site--home{{ end }}">
+    <div class="site-body{{ if .IsHome }} site-body--centered{{ end }}">
+      {{ if not .IsHome }}
+      {{ partial "header.html" . }}
+      {{ end }}
+
+      <main class="site-main">
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
+
+    <hr />
+
+    {{ partial "footer.html" . }}
+  </div>
+
+  {{ partial "analytics.html" . }}
+</body>
+</html>

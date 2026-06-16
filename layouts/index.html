@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="profile">
+  <h3 class="profile-name">{{ site.Title }}</h3>
+  <div class="profile-photo">
+    <img src="{{ site.Params.avatar }}" alt="{{ site.Title }}" width="150" height="150">
+  </div>
+  <div class="profile-bio">
+    {{ .Content }}
+  </div>
+</section>
+{{ end }}
